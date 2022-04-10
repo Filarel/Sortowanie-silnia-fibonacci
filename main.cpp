@@ -7,36 +7,39 @@ using namespace std;
 
 void Petla(string imie)
 {
-    int i=0;
+    int i = 0;
 
-    do {
+    do
+    {
         cout << imie << endl;
         i++;
     }
-    while (i<10);
+    while (i < 10);
 }
-int DoLoop(int liczba){
-    int a=1, b=0;
+int DoLoop(int liczba)
+{
+    int a = 1, b = 0;
     int tab[liczba];
-    for (int i=0; i<liczba; i++){
-        tab[i]=a+b;
-        a=b;
-        b=tab[i];
+    for (int i = 0; i < liczba; i++){
+        tab[i] = a + b;
+        a = b;
+        b = tab[i];
         cout << "[" << i << "]= " << tab[i] << endl;
     }
 }
-int DuLup(int lup){
+int DuLup(int lup)
+{
     int tab[lup];
     tab[0] = 0;
     tab[1] = 1;
-    for(int i = 1; i <= lup; i++){
+    for(int i = 1; i <= lup; i++)
+    {
         tab[i+1] = tab[i] + tab[i-1];
         cout << tab[i] << " ";
     }
-
-
 }
-int DoStrong(int str){
+int DoStrong(int str)
+{
     int tab[str];
     int silnia = 1;
 
@@ -45,13 +48,14 @@ int DoStrong(int str){
         tab[i] = silnia * i;
         cout << tab[i] << endl;
     }
-
 }
-int DoStrong1(int range){
+int DoStrong1(int range)
+{
     int silnia = 0;
-    for(int i = 0; i < range; i++){
-        silnia = range * (range-1);
 
+    for(int i = 0; i < range; i++)
+    {
+        silnia = range * (range-1);
     }
     cout << silnia;
 }
@@ -82,7 +86,6 @@ int DoSort()
         }
     for (int x = 0; x < 100; x++)
         cout << a[x] << endl;
-
 }
 void DoStringTab(string tekst, char a, char b)
 {
@@ -101,10 +104,7 @@ void DoStringTab(string tekst, char a, char b)
         }
 
     cout << "liczba wystapien literki pierwszej: " << licznik_a << endl << "liczba wystapien literki drugiej: " << licznik_b;
-
 }
-
-
 
 int main()
 {
