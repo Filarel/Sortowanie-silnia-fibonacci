@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 using namespace std;
 
@@ -26,10 +27,10 @@ int DoLoop(int liczba){
 }
 int DuLup(int lup){
     int tab[lup];
-    tab[0]=0;
-    tab[1]=1;
-    for(int i=1; i<=lup; i++){
-        tab[i+1]=tab[i]+tab[i-1];
+    tab[0] = 0;
+    tab[1] = 1;
+    for(int i = 1; i <= lup; i++){
+        tab[i+1] = tab[i] + tab[i-1];
         cout << tab[i] << " ";
     }
 
@@ -37,19 +38,19 @@ int DuLup(int lup){
 }
 int DoStrong(int str){
     int tab[str];
-    int silnia=1;
+    int silnia = 1;
 
-    for (int i=1; i<=str; i++)
+    for (int i = 1; i <= str; i++)
     {
-        tab[i]=silnia*i;
+        tab[i] = silnia * i;
         cout << tab[i] << endl;
     }
 
 }
 int DoStrong1(int range){
-    int silnia=0;
-    for(int i=0; i<range; i++){
-        silnia=range*(range-1);
+    int silnia = 0;
+    for(int i = 0; i < range; i++){
+        silnia = range * (range-1);
 
     }
     cout << silnia;
@@ -82,10 +83,27 @@ int DoSort()
     for (int x = 0; x < 100; x++)
         cout << a[x] << endl;
 
+}
+void DoStringTab(string tekst, char a, char b)
+{
+    int licznik_a = 0;
+    int licznik_b = 0;
 
+    int dlugosc = tekst.length();
+    cout << "dlugosc stringa: " << dlugosc <<  endl;
 
+    for(int i = 0; i < dlugosc; i++)
+        {
+        if(tekst[i] == a)
+            licznik_a++;
+        if(tekst[i] == b)
+            licznik_b++;
+        }
+
+    cout << "liczba wystapien literki pierwszej: " << licznik_a << endl << "liczba wystapien literki drugiej: " << licznik_b;
 
 }
+
 
 
 int main()
@@ -94,7 +112,8 @@ int main()
     //DoStrong(5);
     //DoStrong1(5);
     //DoLoop(10);
-    DoSort();
+    //DoSort();
+    DoStringTab("afjbkeabaebbhabeaabbaaarhgbabhabehaababha", 'a', 'b');
     return 0;
 
 }
